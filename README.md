@@ -1,5 +1,7 @@
 # gqso-914-2022
 
+Este repositório contém o código da API calculadora da disciplina de GQSO, 2022.
+
 Alunos:<br/>
 Joellen Aparecida Batista Silva<br/>
 Jhonathan Santos da Costa<br/>
