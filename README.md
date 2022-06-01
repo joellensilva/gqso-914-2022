@@ -12,7 +12,7 @@ Este repositório contém o código da API calculadora para a disciplina de GQSO
 
 ### Licença
 
-Leia a nossa [licença] (https://github.com/Joellensilva/gqso-914-2022/blob/main/LICENSE).
+Leia a nossa [licença](https://github.com/Joellensilva/gqso-914-2022/blob/main/LICENSE).
 
 ### Expressão de gratidão
 
