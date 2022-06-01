@@ -1,6 +1,6 @@
 # gqso-914-2022
 
-# Calculadora
+# API Calculadora
 
 Este repositório contém o código da API calculadora para a disciplina de GQSO, 2022. <br/>
 
@@ -23,3 +23,4 @@ Leia a nossa [licença](https://github.com/Joellensilva/gqso-914-2022/blob/main/
 ### Expressão de gratidão
 
 Obrigado por ter lido, volte sempre! 
+
