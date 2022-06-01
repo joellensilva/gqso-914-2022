@@ -5,11 +5,16 @@
 Este repositório contém o código da API calculadora para a disciplina de GQSO, 2022. <br/>
 
 ### Autores:
-* [Iago Silva Lima](isl2@aluno.ifal.edu.br)
-* [Jhonathan Santos da Costa](jsc6@aluno.ifal.edu.br)
-* [Joellen Aparecida Batista Silva](jabs2@aluno.ifal.edu.br)
-* [José Miguel dos Santos Medrado](jmsm1@aluno.ifal.edu.br)
+* Iago Silva Lima 
+* Jhonathan Santos da Costa 
+* Joellen Aparecida Batista Silva 
+* José Miguel dos Santos Medrado 
 
+### Entre em contato conosco:
+* Iago - isl2@aluno.ifal.edu.br
+* Jhonathan - jsc6@aluno.ifal.edu.br
+* Joellen - jabs2@aluno.ifal.edu.br
+* Miguel - jmsm1@aluno.ifal.edu.br
 
 ### Licença
 
