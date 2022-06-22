@@ -9,6 +9,8 @@ public class Main {
 
         HttpServer servidor = HttpServer.create(endereco, 10);
         servidor.createContext("/subtracao", new Subtracao());
+        servidor.createContext("/adicao", new Adicao());
+        servidor.createContext("/multiplicacao", new Multiplicacao());
         servidor.start();
 
 
