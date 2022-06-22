@@ -9,10 +9,10 @@ public class Multiplicacao implements HttpHandler{
     public void handle(HttpExchange exchange) throws IOException {
         try {
             String[] partes = exchange.getRequestURI().getPath().split("/");
-            float n1 = Float.parseFloat(partes[2]);
-            float n2 = Float.parseFloat(partes[3]);
-            float mult = n1*n2;
-                byte[] resposta = Float.toString(mult).getBytes();  
+            float numero1 = Float.parseFloat(partes[2]);
+            float numero2 = Float.parseFloat(partes[3]);
+            float multiplicacao = numero1*numero2;
+                byte[] resposta = Float.toString(multiplicacao).getBytes();  
                 exchange.sendResponseHeaders(200, resposta.length);
                 exchange.getResponseBody().write(resposta);
                 return; 
