@@ -11,7 +11,7 @@ public class Divisao implements HttpHandler{
             String[] partes = exchange.getRequestURI().getPath().split("/");
             float num1 = Float.parseFloat(partes[2]);
             float num2 = Float.parseFloat(partes[3]);
-            float divisao = n1/n2;
+            float divisao = num1/num2;
                 byte[] resposta = Float.toString(divisao).getBytes();  
                 exchange.sendResponseHeaders(200, resposta.length);
                 exchange.getResponseBody().write(resposta);
