@@ -19,4 +19,14 @@ public class Testes {
       assertEquals(StatusCode.OK, rsp.getStatusCode());
     });
   }
+
+  @Test
+  public void subtracao() {
+    MockRouter router = new MockRouter(new App());
+    router.get("/subtracao/17/4", rsp -> {
+      assertEquals(13.0, rsp.value());
+      assertEquals(StatusCode.OK, rsp.getStatusCode());
+    });
+  }
+  
 }
