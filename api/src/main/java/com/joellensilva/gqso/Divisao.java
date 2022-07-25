@@ -10,10 +10,10 @@ public class Divisao {
 
     @GET
     public float calculaDiv(@PathParam("n1") String n1, @PathParam("n2") String n2) {
-        float numero1 = Float.parseFloat(n1);
-        float numero2 = Float.parseFloat(n2);
+        float num1 = Float.parseFloat(n1);
+        float num2 = Float.parseFloat(n2);
         try {
-            return numero1 / numero2;
+            return num1 / num2;
         } catch (NumberFormatException nfe) {
             throw new BadRequestException("Parâmetro inválido: " + n1 + " e " + n2);
         }
