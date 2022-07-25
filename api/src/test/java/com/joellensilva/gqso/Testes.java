@@ -19,5 +19,13 @@ public class Testes {
       assertEquals(StatusCode.OK, rsp.getStatusCode());
     });
   }
+  @Test
+  public void multiplicacao() {
+    MockRouter router = new MockRouter(new App());
+    router.get("/multiplicacao/7/3", rsp -> {
+      assertEquals(21.0, rsp.value());
+      assertEquals(StatusCode.OK, rsp.getStatusCode());
+    });
+  }
   
 }
