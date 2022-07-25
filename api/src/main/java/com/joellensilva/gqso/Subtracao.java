@@ -1,24 +1,23 @@
-import java.io.IOException;
-import java.io.OutputStream;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 
-public class Subtracao implements HttpHandler{
-    @Override
-    public void handle(HttpExchange exchange) throws IOException {
+package com.joellensilva.gqso;
+
+import io.jooby.annotations.GET;
+import io.jooby.annotations.Path;
+import io.jooby.annotations.PathParam;
+import io.jooby.exception.BadRequestException;
+
+@Path("/subtracao/{n1}/{n2}")
+public class Subtracao {
+
+    @GET
+    public double calculaSub(@PathParam("n1") String n1, @PathParam("n2") String n2) {
+        float numero1 = Float.parseFloat(n1);
+        float numero2 = Float.parseFloat(n2);
         try {
-            String[] partes = exchange.getRequestURI().getPath().split("/");
-            float n1 = Float.parseFloat(partes[2]);
-            float n2 = Float.parseFloat(partes[3]);
-            float subtracao = n1-n2;
-                byte[] resposta = Float.toString(subtracao).getBytes();  
-                exchange.sendResponseHeaders(200, resposta.length);
-                exchange.getResponseBody().write(resposta);
-                return; 
-    
-        } finally {
-            exchange.close();
+            return numero1-numero2;
+        } catch (NumberFormatException nfe) {
+            throw new BadRequestException("Parâmetro inválido: " + n1 + " e " + n2);
         }
     }
 }
