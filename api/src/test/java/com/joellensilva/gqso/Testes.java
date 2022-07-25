@@ -14,8 +14,8 @@ public class Testes {
   @Test
   public void adicao() {
     MockRouter router = new MockRouter(new App());
-    router.get("/adicao/5/5", rsp -> {
-      assertEquals(10.0, rsp.value());
+    router.get("/adicao/9/6", rsp -> {
+      assertEquals(15.0, rsp.value());
       assertEquals(StatusCode.OK, rsp.getStatusCode());
     });
   }
