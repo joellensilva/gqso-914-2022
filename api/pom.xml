@@ -6,14 +6,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>api</artifactId>
-  <groupId>com.Joellensilva.gqso-914-2022</groupId>
+  <groupId>com.joellensilva.gqso-914-2022</groupId>
   <version>1.0.0</version>
 
   <name>api</name>
 
   <properties>
     <!-- Startup class -->
-    <application.class>com.Joellensilva.gqso-914-2022.App</application.class>
+    <application.class>com.joellensilva.gqso-914-2022.App</application.class>
 
     <jooby.version>2.15.1</jooby.version>
 
