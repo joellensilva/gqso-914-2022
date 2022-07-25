@@ -9,9 +9,9 @@ import io.jooby.exception.BadRequestException;
 public class Divisao {
 
     @GET
-    public float calculaDiv(@PathParam("n1") String n1, @PathParam("n2") String n2) {
-        float num1 = Float.parseFloat(n1);
-        float num2 = Float.parseFloat(n2);
+    public double calculaDiv(@PathParam("n1") String n1, @PathParam("n2") String n2) {
+        double num1 = Double.parseDouble(n1);
+        double num2 = Double.parseDouble(n2);
         try {
             return num1 / num2;
         } catch (NumberFormatException nfe) {

@@ -10,8 +10,8 @@ public class Multiplicacao {
 
     @GET
     public double calculaMult(@PathParam("n1") String n1, @PathParam("n2") String n2) {
-        float numero1 = Float.parseFloat(n1);
-        float numero2 = Float.parseFloat(n2);
+        double numero1 = Double.parseDouble(n1);
+        double numero2 = Double.parseDouble(n2);
         try {
             return numero1 * numero2;
         } catch (NumberFormatException nfe) {
