@@ -14,17 +14,17 @@ public class Testes {
   @Test
   public void adicao() {
     MockRouter router = new MockRouter(new App());
-    router.get("/adicao/9/6", rsp -> {
-      assertEquals(15.0, rsp.value());
-      assertEquals(StatusCode.OK, rsp.getStatusCode());
+    router.get("/adicao/9/6", resposta -> {
+      assertEquals(15.0, resposta.value());
+      assertEquals(StatusCode.OK, resposta.getStatusCode());
     });
   }
   @Test
   public void multiplicacao() {
     MockRouter router = new MockRouter(new App());
-    router.get("/multiplicacao/7/3", rsp -> {
-      assertEquals(21.0, rsp.value());
-      assertEquals(StatusCode.OK, rsp.getStatusCode());
+    router.get("/multiplicacao/7/3", resposta -> {
+      assertEquals(21.0, resposta.value());
+      assertEquals(StatusCode.OK, resposta.getStatusCode());
     });
   }
   

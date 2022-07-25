@@ -23,7 +23,7 @@ public class IntegrationTest {
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
-      assertEquals("Welcome to Jooby!", rsp.body().string());
+      assertEquals("Bem-vindo à nossa API!", rsp.body().string());
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }
