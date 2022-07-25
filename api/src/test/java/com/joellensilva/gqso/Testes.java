@@ -1,4 +1,4 @@
-package com.joellensilva.gqso;
+                                          package com.joellensilva.gqso;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -16,15 +16,6 @@ public class Testes {
     MockRouter router = new MockRouter(new App());
     router.get("/adicao/9/6", rsp -> {
       assertEquals(15.0, rsp.value());
-      assertEquals(StatusCode.OK, rsp.getStatusCode());
-    });
-  }
-
-  @Test
-  public void subtracao() {
-    MockRouter router = new MockRouter(new App());
-    router.get("/subtracao/17/4", rsp -> {
-      assertEquals(13.0, rsp.value());
       assertEquals(StatusCode.OK, rsp.getStatusCode());
     });
   }
