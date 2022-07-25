@@ -11,7 +11,7 @@ public class UnitTest {
   public void welcome() {
     MockRouter router = new MockRouter(new App());
     router.get("/", rsp -> {
-      assertEquals("Welcome to Jooby!", rsp.value());
+      assertEquals("Bem-vindo à nossa API!", rsp.value());
       assertEquals(StatusCode.OK, rsp.getStatusCode());
     });
   }
