@@ -1,13 +1,11 @@
-                                          package com.joellensilva.gqso;
+package com.joellensilva.gqso;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
 import io.jooby.MockRouter;
 import io.jooby.StatusCode;
-import io.jooby.exception.BadRequestException;
 
 public class Testes {
 
@@ -19,6 +17,7 @@ public class Testes {
       assertEquals(StatusCode.OK, resposta.getStatusCode());
     });
   }
+
   @Test
   public void multiplicacao() {
     MockRouter router = new MockRouter(new App());
@@ -36,5 +35,13 @@ public class Testes {
       assertEquals(StatusCode.OK, resp.getStatusCode());
     });
   }
-  
+
+  @Test
+  public void divisao() {
+    MockRouter router = new MockRouter(new App());
+    router.get("/divisao/16/4", resposta -> {
+      assertEquals(4.0, resposta.value());
+      assertEquals(StatusCode.OK, resposta.getStatusCode());
+    });
+  }
 }
