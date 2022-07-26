@@ -39,9 +39,9 @@ public class Testes {
   @Test
   public void divisao() {
     MockRouter router = new MockRouter(new App());
-    router.get("/divisao/16/4", resp -> {
-      assertEquals(4.0, resp.value());
-      assertEquals(StatusCode.OK, resp.getStatusCode());
+    router.get("/divisao/16/4", resposta -> {
+      assertEquals(4.0, resposta.value());
+      assertEquals(StatusCode.OK, resposta.getStatusCode());
     });
   }
 }
