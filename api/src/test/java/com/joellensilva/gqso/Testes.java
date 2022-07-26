@@ -31,9 +31,9 @@ public class Testes {
   @Test
   public void subtracao() {
     MockRouter router = new MockRouter(new App());
-    router.get("/subtracao/17/4", resposta -> {
-      assertEquals(13.0, resposta.value());
-      assertEquals(StatusCode.OK, resposta.getStatusCode());
+    router.get("/subtracao/17/4", resp -> {
+      assertEquals(13.0, resp.value());
+      assertEquals(StatusCode.OK, resp.getStatusCode());
     });
   }
   
