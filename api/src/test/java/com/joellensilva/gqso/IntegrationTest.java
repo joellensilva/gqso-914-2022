@@ -29,7 +29,7 @@ public class IntegrationTest {
   }
 
   @Test
-  public void erro_subtracao(int serverPort) throws IOException {
+  public void Erro_subtracao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/subtracao/45/c")
         .build();
