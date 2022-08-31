@@ -17,14 +17,24 @@ public class IntegrationTest {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
-  public void shouldSayHi(int serverPort) throws IOException {
+  public void multiplicacao (int serverPort) throws IOException {
     Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort)
+        .url("http://localhost:" + serverPort + "/multiplicacao/5/8")
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
-      assertEquals("Bem-vindo à nossa API!", rsp.body().string());
+      assertEquals("40.0", rsp.body().string());
       assertEquals(StatusCode.OK.value(), rsp.code());
+    }
+  }
+  @Test
+  public void Erro_Multiplicacao (int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/multiplicacao/a/b")
+        .build();
+
+    try (Response rsp = client.newCall(req).execute()) {
+      assertEquals(StatusCode.BAD_REQUEST.value(), rsp.code());
     }
   }
 }
