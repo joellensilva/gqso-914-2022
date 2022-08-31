@@ -27,6 +27,7 @@ public class IntegrationTest {
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }
+  
   @Test
   public void Erro_Divisao (int serverPort) throws IOException {
     Request req = new Request.Builder()
