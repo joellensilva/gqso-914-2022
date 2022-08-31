@@ -17,6 +17,29 @@ public class IntegrationTest {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
+  public void subtracao(int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/subtracao/46/33")
+        .build();
+
+    try (Response rsp = client.newCall(req).execute()) {
+      assertEquals("13.0", rsp.body().string());
+      assertEquals(StatusCode.OK.value(), rsp.code());
+    }
+  }
+
+  @Test
+  public void Erro_subtracao(int serverPort) throws IOException {
+    Request req = new Request.Builder()
+        .url("http://localhost:" + serverPort + "/subtracao/45/c")
+        .build();
+
+    try (Response rsp = client.newCall(req).execute()) {
+      assertEquals(StatusCode.BAD_REQUEST.value(), rsp.code());
+    }
+  }
+  
+  @Test
   public void divisao (int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/divisao/4/2")
@@ -39,3 +62,4 @@ public class IntegrationTest {
     }
   }
 }
+        
