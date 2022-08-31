@@ -38,6 +38,7 @@ public class IntegrationTest {
       assertEquals(StatusCode.BAD_REQUEST.value(), rsp.code());
     }
   }
+  
   @Test
   public void divisao (int serverPort) throws IOException {
     Request req = new Request.Builder()
