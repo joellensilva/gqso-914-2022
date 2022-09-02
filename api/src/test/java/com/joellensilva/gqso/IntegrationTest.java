@@ -17,8 +17,7 @@ public class IntegrationTest {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
-
-  public void multiplicacao (int serverPort) throws IOException {
+  public void multiplicacao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/multiplicacao/5/8")
         .build();
@@ -28,8 +27,9 @@ public class IntegrationTest {
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }
+
   @Test
-  public void Erro_Multiplicacao (int serverPort) throws IOException {
+  public void Erro_Multiplicacao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/multiplicacao/a/b")
         .build();
@@ -60,9 +60,9 @@ public class IntegrationTest {
       assertEquals(StatusCode.BAD_REQUEST.value(), rsp.code());
     }
   }
-  
+
   @Test
-  public void divisao (int serverPort) throws IOException {
+  public void divisao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/divisao/4/2")
         .build();
@@ -72,9 +72,9 @@ public class IntegrationTest {
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }
-  
+
   @Test
-  public void Erro_Divisao (int serverPort) throws IOException {
+  public void Erro_Divisao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/divisao/c/d")
         .build();
@@ -84,6 +84,3 @@ public class IntegrationTest {
     }
   }
 }
-
-        
-        
