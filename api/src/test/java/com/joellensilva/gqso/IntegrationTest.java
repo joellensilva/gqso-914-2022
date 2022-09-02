@@ -17,7 +17,7 @@ public class IntegrationTest {
   static OkHttpClient client = new OkHttpClient();
 
   @Test
-  
+
   public void adicao(int serverPort) throws IOException {
     Request req = new Request.Builder()
         .url("http://localhost:" + serverPort + "/adicao/5/6")
@@ -28,6 +28,7 @@ public class IntegrationTest {
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }
+
   @Test
   public void Erro_Adicao(int serverPort) throws IOException {
     Request req = new Request.Builder()
@@ -106,4 +107,3 @@ public class IntegrationTest {
     }
   }
 }
-
